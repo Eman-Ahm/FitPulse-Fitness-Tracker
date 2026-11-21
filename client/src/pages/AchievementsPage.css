@@ -1,0 +1,32 @@
+.ach-progress-card { margin-bottom: 24px; }
+.ach-progress-row  { display: flex; justify-content: space-between; align-items: center; }
+.ach-progress-label { font-size: .9rem; font-weight: 600; color: var(--color-text); }
+.ach-progress-pct   { font-size: 1.1rem; font-weight: 800; color: var(--color-accent); }
+.ach-progress-sub   { font-size: .78rem; color: var(--color-muted); margin-top: 8px; }
+
+.ach-section-title { font-size: 1rem; font-weight: 700; color: var(--color-text); margin-bottom: 14px; }
+.ach-toast { font-size: .92rem; }
+
+.ach-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px,1fr)); gap: 14px; margin-bottom: 8px; }
+
+.ach-card {
+  display: flex; align-items: flex-start; gap: 14px;
+  position: relative; padding: 18px 20px;
+  transition: border-color var(--transition);
+}
+.ach-card.earned { border-color: var(--color-accent); }
+.ach-card.locked { opacity: .5; filter: grayscale(.5); }
+
+.ach-icon { font-size: 2.2rem; flex-shrink: 0; line-height: 1; }
+.ach-body { flex: 1; }
+.ach-title { font-size: .95rem; font-weight: 700; color: var(--color-text); margin-bottom: 3px; }
+.ach-desc  { font-size: .8rem; color: var(--color-muted); line-height: 1.4; }
+.ach-date  { font-size: .73rem; color: var(--color-accent); margin-top: 5px; font-weight: 600; }
+
+.ach-badge-done {
+  position: absolute; top: 12px; right: 12px;
+  background: var(--color-accent); color: #fff;
+  width: 20px; height: 20px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: .72rem; font-weight: 800;
+}

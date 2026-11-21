@@ -1,10 +1,9 @@
 const express = require('express');
-const router = express.Router();
+const router  = express.Router();
 const { authenticateToken } = require('../middleware/auth');
-const { getAnalytics } = require('../controllers/analyticsController');
+const { getAnalytics, getDailyChart } = require('../controllers/analyticsController');
 
 router.use(authenticateToken);
-
-router.get('/', getAnalytics);
-
+router.get('/',      getAnalytics);
+router.get('/daily', getDailyChart);
 module.exports = router;

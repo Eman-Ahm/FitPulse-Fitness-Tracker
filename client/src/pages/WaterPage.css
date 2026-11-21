@@ -1,0 +1,31 @@
+.water-page { display: flex; flex-direction: column; gap: 20px; }
+.water-progress-card { display: flex; flex-direction: column; gap: 8px; }
+.water-progress-header { display: flex; align-items: flex-start; justify-content: space-between; }
+.water-total { font-size: 2rem; font-weight: 900; color: #3b82f6; line-height: 1; }
+.water-goal-text { font-size: .8rem; color: rgba(255,255,255,.4); margin-top: 3px; }
+.water-pct  { font-size: 1.4rem; font-weight: 800; color: #22c55e; }
+.water-glasses { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+.water-glass { font-size: 1.3rem; opacity: .18; transition: opacity .2s; }
+.water-glass.filled { opacity: 1; }
+.water-quick-card { display: flex; flex-direction: column; gap: 12px; }
+.water-section-title { font-size: .9rem; font-weight: 700; color: var(--text, #f0f2f8); margin-bottom: 8px; }
+.water-quick-btns { display: flex; gap: 10px; flex-wrap: wrap; }
+.water-quick-btn {
+  padding: 10px 20px; border-radius: 10px;
+  background: rgba(59,130,246,.12); border: 1px solid rgba(59,130,246,.3); color: #3b82f6;
+  font-size: .88rem; font-weight: 700; cursor: pointer; transition: all .15s;
+}
+.water-quick-btn:hover:not(:disabled) { background: rgba(59,130,246,.25); }
+.water-custom-row { display: flex; gap: 10px; }
+.water-custom-row .form-input { flex: 1; }
+.water-empty { font-size: .87rem; color: rgba(255,255,255,.35); padding: 16px 0; text-align: center; }
+.water-log   { display: flex; flex-direction: column; gap: 8px; margin-top: 8px; }
+.water-entry {
+  display: flex; align-items: center; gap: 12px;
+  padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.water-entry:last-child { border-bottom: none; }
+.water-entry-icon   { font-size: 1.2rem; }
+.water-entry-amount { font-size: .95rem; font-weight: 800; color: #3b82f6; }
+.water-entry-time   { font-size: .8rem; color: rgba(255,255,255,.35); flex: 1; }
+.water-del { padding: 5px 12px; font-size: .8rem; }

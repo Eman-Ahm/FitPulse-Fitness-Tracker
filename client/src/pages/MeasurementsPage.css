@@ -1,0 +1,15 @@
+.meas-chart-card { margin-bottom: 20px; padding: 20px; }
+.chart-title { font-size: .9rem; font-weight: 700; color: var(--text, #f0f2f8); margin-bottom: 14px; }
+.meas-form   { margin-bottom: 20px; }
+.meas-form-title { font-size: .95rem; font-weight: 700; color: var(--text, #f0f2f8); margin-bottom: 14px; }
+.meas-grid   { display: grid; grid-template-columns: repeat(3,1fr); gap: 0 16px; }
+.meas-list   { display: flex; flex-direction: column; gap: 12px; }
+.meas-row    { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; padding: 16px 20px; }
+.meas-date   { font-size: .84rem; font-weight: 700; color: var(--text, #f0f2f8); min-width: 130px; }
+.meas-stats  { display: flex; gap: 20px; flex: 1; flex-wrap: wrap; }
+.meas-stat   { display: flex; flex-direction: column; }
+.meas-stat-val { font-size: .95rem; font-weight: 800; color: #22c55e; }
+.meas-stat-lbl { font-size: .68rem; color: rgba(255,255,255,.4); text-transform: uppercase; letter-spacing: .4px; }
+.meas-notes  { font-size: .8rem; color: rgba(255,255,255,.4); font-style: italic; flex-basis: 100%; }
+.meas-del    { padding: 7px 14px; font-size: .82rem; margin-left: auto; }
+@media (max-width: 600px) { .meas-grid { grid-template-columns: 1fr 1fr; } }

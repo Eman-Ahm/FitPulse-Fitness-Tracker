@@ -1,9 +1,5 @@
 .workouts-filters {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  padding: 16px;
-  margin-bottom: 20px;
+  display: flex; flex-wrap: wrap; gap: 12px; padding: 16px; margin-bottom: 20px;
 }
 .filter-select { flex: 1; min-width: 140px; }
 
@@ -14,40 +10,28 @@
 }
 
 .workout-card { display: flex; flex-direction: column; gap: 12px; }
-
 .workout-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: flex; justify-content: space-between; align-items: center;
 }
 .workout-type-badge {
-  background: var(--color-accent-lt);
-  color: var(--color-accent);
-  font-size: .78rem;
-  font-weight: 700;
-  padding: 3px 10px;
-  border-radius: 99px;
-  text-transform: uppercase;
-  letter-spacing: .5px;
+  background: var(--color-accent-lt); color: var(--color-accent);
+  font-size: .72rem; font-weight: 700; padding: 4px 12px;
+  border-radius: 99px; text-transform: uppercase; letter-spacing: .5px;
+  border: 1px solid rgba(34,197,94,.25);
 }
-.workout-date { font-size: .85rem; color: var(--color-muted); }
+.workout-date { font-size: .82rem; color: var(--color-muted); }
 
-.workout-stats { display: flex; gap: 20px; }
-.workout-stat  { display: flex; flex-direction: column; }
-.stat-value    { font-size: 1.05rem; font-weight: 700; color: var(--color-navy); }
-.stat-label    { font-size: .75rem; color: var(--color-muted); }
+.workout-stats { display: flex; gap: 18px; flex-wrap: wrap; }
+.workout-stat  { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.stat-icon     { font-size: 1.1rem; }
+.stat-value    { font-size: 1rem; font-weight: 800; color: var(--color-text); }
+.stat-label    { font-size: .68rem; color: var(--color-muted); text-transform: uppercase; letter-spacing: .4px; }
 
 .workout-notes {
-  font-size: .85rem;
-  color: var(--color-muted);
-  border-left: 3px solid var(--color-border);
-  padding-left: 10px;
+  font-size: .82rem; color: var(--color-muted); font-style: italic;
+  border-left: 3px solid var(--color-accent); padding-left: 10px;
 }
-
 .workout-actions {
-  display: flex;
-  gap: 8px;
-  margin-top: auto;
-  padding-top: 8px;
-  border-top: 1px solid var(--color-border);
+  display: flex; gap: 8px; margin-top: auto;
+  padding-top: 10px; border-top: 1px solid var(--color-border);
 }

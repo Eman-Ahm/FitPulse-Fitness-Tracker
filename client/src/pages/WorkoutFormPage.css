@@ -1,18 +1,45 @@
+/* WorkoutFormPage — dark theme aware */
 .workout-form-page { max-width: 680px; }
+
 .workout-form-card { padding: 32px; }
+
+/* Dark backgrounds for select dropdowns which browsers style inconsistently */
+.workout-form-card select.form-input {
+  background: var(--s3, #181818);
+  color: var(--text, #f0f2f8);
+  /* Remove default arrow on some browsers so our border shows cleanly */
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23555f75' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 34px;
+}
+
+/* date input — Chrome shows a light calendar icon on dark bg */
+.workout-form-card input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0.6);
+  cursor: pointer;
+}
+
 .form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0 20px;
 }
+
 .form-actions {
   display: flex;
   justify-content: flex-end;
   gap: 10px;
   margin-top: 8px;
 }
-textarea.form-input { resize: vertical; }
+
+textarea.form-input { resize: vertical; min-height: 88px; }
+
+/* Error text inherits from global.css .form-error */
 
 @media (max-width: 520px) {
-  .form-grid { grid-template-columns: 1fr; }
+  .form-grid              { grid-template-columns: 1fr; }
+  .workout-form-card      { padding: 20px; }
 }

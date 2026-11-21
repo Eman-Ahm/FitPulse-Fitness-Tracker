@@ -1,0 +1,128 @@
+/* ActivityChart component */
+.ac-wrap { padding: 20px 22px; }
+
+.ac-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.ac-title {
+  font-size: .92rem;
+  font-weight: 800;
+  color: var(--text, #f0f2f8);
+  margin-bottom: 3px;
+}
+.ac-summary {
+  font-size: .78rem;
+  color: rgba(255,255,255,.4);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.ac-change {
+  font-weight: 700;
+  font-size: .74rem;
+  padding: 1px 7px;
+  border-radius: 99px;
+}
+.ac-change.pos { background: rgba(34,197,94,.15); color: #22c55e; }
+.ac-change.neg { background: rgba(239,68,68,.15);  color: #ef4444; }
+
+.ac-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Metric tabs */
+.ac-tabs { display: flex; gap: 4px; }
+.ac-tab {
+  padding: 4px 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,.1);
+  background: transparent;
+  color: rgba(255,255,255,.4);
+  font-size: .74rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all .15s;
+}
+.ac-tab.active,
+.ac-tab:hover { background: rgba(255,255,255,.06); }
+
+/* Range buttons */
+.ac-ranges { display: flex; gap: 3px; }
+.ac-range {
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,.08);
+  background: transparent;
+  color: rgba(255,255,255,.35);
+  font-size: .72rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all .15s;
+}
+.ac-range:hover  { border-color: rgba(255,255,255,.2); color: rgba(255,255,255,.7); }
+.ac-range.active { border-color: var(--green, #22c55e); color: var(--green, #22c55e); background: rgba(34,197,94,.08); }
+
+/* Tooltip */
+.ac-tooltip {
+  background: #0a0a0a;
+  border: 1px solid #1e1e1e;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: .8rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,.6);
+  min-width: 140px;
+}
+.ac-tooltip-date { font-weight: 700; color: #f0f2f8; margin-bottom: 5px; }
+.ac-tooltip-row  { color: rgba(255,255,255,.55); margin-top: 2px; }
+.ac-tooltip-row span { font-weight: 700; }
+
+/* Empty state */
+.ac-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  gap: 10px;
+  text-align: center;
+}
+.ac-empty-icon { font-size: 2.5rem; }
+.ac-empty-text { font-size: .87rem; color: rgba(255,255,255,.4); max-width: 300px; line-height: 1.5; }
+.ac-empty-btn  { margin-top: 6px; font-size: .84rem; padding: 9px 22px; }
+
+/* Error */
+.ac-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 32px;
+  color: rgba(255,255,255,.4);
+  font-size: .85rem;
+}
+.ac-retry { padding: 7px 16px; font-size: .8rem; }
+
+/* Skeleton */
+.ac-skeleton { padding: 4px 0; }
+.ac-skeleton-bar {
+  background: linear-gradient(90deg, rgba(255,255,255,.03) 25%, rgba(255,255,255,.07) 50%, rgba(255,255,255,.03) 75%);
+  background-size: 400% 100%;
+  border-radius: 8px;
+  animation: shimmer 1.4s infinite;
+}
+@keyframes shimmer { 0% { background-position: 200% 0 } 100% { background-position: -200% 0 } }
+
+@media (max-width: 600px) {
+  .ac-header     { flex-direction: column; }
+  .ac-controls   { width: 100%; }
+  .ac-tabs, .ac-ranges { width: 100%; }
+  .ac-tab, .ac-range { flex: 1; text-align: center; }
+}

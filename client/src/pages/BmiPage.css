@@ -1,0 +1,46 @@
+.bmi-page { max-width: 900px; }
+.bmi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.bmi-form-title { font-size: .95rem; font-weight: 800; color: var(--text,#f0f2f8); margin-bottom: 16px; }
+.bmi-gender { display: flex; gap: 8px; }
+.bmi-gender-btn {
+  flex: 1; padding: 9px; border-radius: 8px;
+  border: 1px solid rgba(255,255,255,.12); background: transparent;
+  color: rgba(255,255,255,.5); font-weight: 700; cursor: pointer; transition: all .15s;
+}
+.bmi-gender-btn.active { border-color: var(--green,#22c55e); color: var(--green,#22c55e); background: rgba(34,197,94,.08); }
+.bmi-calc-btn { width: 100%; justify-content: center; margin-top: 4px; }
+
+/* Result card */
+.bmi-result-card { display: flex; align-items: center; justify-content: center; min-height: 320px; }
+.bmi-placeholder { text-align: center; color: rgba(255,255,255,.3); }
+.bmi-placeholder-icon { font-size: 3rem; margin-bottom: 12px; }
+
+.bmi-result { display: flex; flex-direction: column; align-items: center; gap: 10px; width: 100%; }
+.bmi-number   { font-size: 4rem; font-weight: 900; line-height: 1; letter-spacing: -2px; }
+.bmi-category { font-size: 1.2rem; font-weight: 800; }
+
+/* Scale */
+.bmi-scale-wrap { position: relative; width: 100%; padding-bottom: 20px; }
+.bmi-scale-bar  { display: flex; height: 10px; border-radius: 99px; overflow: hidden; margin-bottom: 6px; }
+.bmi-scale-seg  { height: 100%; }
+.bmi-scale-pointer {
+  position: absolute; top: -4px;
+  width: 18px; height: 18px; border-radius: 50%;
+  background: #fff; box-shadow: 0 0 6px rgba(0,0,0,.5);
+  transform: translateX(-50%);
+  transition: left .3s ease;
+}
+.bmi-scale-labels {
+  display: flex; justify-content: space-between;
+  font-size: .68rem; color: rgba(255,255,255,.35);
+}
+
+.bmi-info { width: 100%; margin-top: 8px; }
+.bmi-info-row { display: flex; justify-content: space-between; padding: 7px 0; border-bottom: 1px solid rgba(255,255,255,.06); font-size: .88rem; }
+.bmi-info-row:last-child { border-bottom: none; }
+.bmi-info-label { color: rgba(255,255,255,.4); }
+.bmi-info-value { font-weight: 700; color: var(--text,#f0f2f8); }
+
+.bmi-disclaimer { font-size: .74rem; color: rgba(255,255,255,.25); text-align: center; line-height: 1.5; }
+
+@media (max-width: 640px) { .bmi-grid { grid-template-columns: 1fr; } }
