@@ -156,6 +156,13 @@ FitPulse-Fitness-Tracker/
 
 ## 🚀 Windows Setup (XAMPP)
 
+### 0. Clone the project
+
+```powershell
+git clone https://github.com/Eman-Ahm/FitPulse-Fitness-Tracker.git
+cd FitPulse-Fitness-Tracker
+```
+
 ### 1. Start MySQL
 
 Open XAMPP Control Panel → click **Start** next to MySQL.
@@ -200,8 +207,10 @@ SMTP_PASS=
 ### 4. Install dependencies
 
 ```powershell
-cd server; npm install
-cd client; npm install
+cd server
+npm install
+cd ..\client
+npm install
 ```
 
 ### 5. Run the app
@@ -209,7 +218,7 @@ cd client; npm install
 **Terminal 1 — API server:**
 ```powershell
 cd server
-node index.js
+npm start
 ```
 Expected: `✅ MySQL connected` + `FitPulse server running on http://localhost:5000`
 
@@ -324,6 +333,13 @@ Key steps:
 
 `/privacy` — Privacy Policy template (⚠️ review with lawyer before going commercial)
 `/terms` — Terms of Service template (⚠️ review with lawyer before going commercial)
+
+---
+
+## 👩‍💻 Author
+
+**Eman Ahmed**
+GitHub: [Eman-Ahm](https://github.com/Eman-Ahm)
 
 ---
 
